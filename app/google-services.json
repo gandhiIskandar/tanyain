@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "935941349693",
+    "firebase_url": "https://tanyain-aed3f-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "tanyain-aed3f",
+    "storage_bucket": "tanyain-aed3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:935941349693:android:70db4dcc7a468e31f02554",
+        "android_client_info": {
+          "package_name": "org.d3ifcool.tanyain"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "935941349693-9f5jmp7lgfutdnd62518ue1no8894par.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.d3ifcool.tanyain",
+            "certificate_hash": "5f48d5e460db38ff7fcdb372f2c7d6c5f331f6a5"
+          }
+        },
+        {
+          "client_id": "935941349693-tqt60fpkk8hrk42vkie9nkhrcpnatuo0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.d3ifcool.tanyain",
+            "certificate_hash": "aa7c00b8fa677d931378f6cdf293425520a204ce"
+          }
+        },
+        {
+          "client_id": "935941349693-ftlip4gipc0v190ncu3m74kb38prf0p8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9EHj6OvTH_WHCYEZdftvA4-gr2DKEasg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "935941349693-ftlip4gipc0v190ncu3m74kb38prf0p8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

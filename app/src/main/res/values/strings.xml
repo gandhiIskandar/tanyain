@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">tanyain</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logo_tanyain">logo tanyain</string>
+    <string name="main_btn">Main!</string>
+    <string name="ubah_pertanyaan_btn">Ubah Pertanyaan</string>
+    <string name="about_btn">About</string>
+    <string name="exit_btn">Exit</string>
+    <string name="about">About</string>
+    <string name="deskripsi_aplikasi">Aplikasi Tanyain! adalah aplikasi yang digunakan ketika user sedang berkumpul bersama teman, pacar, sahabat, dan keluarga, dan nikmati serunya bermain bersama-sama.\n\nAplikasi Tanyain! dimainkan dengan cara memberikan pertanyaan secara random. pertanyaan ini bisa dibuat oleh user dan user dapat mengubah pertanyaan, menghapus pertanyaan dan juga menambahkan pertanyaan yang user inginkan untuk dimainkan bersama teman, pacar, sahabat, dan keluarga dari user. \n\nApliasi Tanyain! dapat membuat hubungan semakin erat dengan cara menjawab pertanyaan yang biasanya sulit ditanyakan kepada seseorang, dan akan membuat hubungan dengan teman, pacar, sahabat, dan keluarga menjadi lebih terbuka karena pertanyaan yang sulit disampaikan, menjadi diwakilkan oleh aplikasi Tanyain! Aplikasi Tanyain! juga dapat digunakan untuk mencairkan suasana ketika suasana sedang gabut. \n\nAplikasi Tanyain! juga mempunyai beberapa fitur unggulan, diantaranya adalah: \n\n- pertanyaan yang sudah sediakan aplikasi maupun yang sudah diubah oleh user \n- membuat pertanyaan, mengubah pertanyaan dan menghapus pertanyaan dari daftar pertanyaan \n- gameplay yang sederhana dan mudah digunakan oleh user</string>
+    <string name="selesai">Selesai</string>
+    <string name="ketik_pertanyaan">Silahkan ketik pertanyaannya</string>
+    <string name="batal">Batal</string>
+    <string name="masukan_pertanyaan">masukan pertanyaan</string>
+    <string name="tambah">Tambah</string>
+    <string name="empty_message">Pertanyaan jangan kosong ya!</string>
+    <string name="hapus_pertanyaan">Apakah anda yakin ingin menghapus pertanyaan ini?</string>
+    <string name="hapus">Hapus</string>
+    <string name="inilah_pertanyaannya">Inilah Pertanyaannya!!!</string>
+    <string name="kembali">Kembali</string>
+    <string name="main_lagi">Main Lagi!</string>
+    <string name="pertanyaan_kosong">Belum ada pertanyaan nih, isi dulu di menu "ubah pertanyaan"</string>
+    <string name="logout">Logout</string>
+</resources>
