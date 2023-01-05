@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
         handler = Handler(Looper.getMainLooper())
 
-        // dialog loading akan hilang dan lokasi tidak ditemukan
+        // jika lokasi tidak ditemukan selama 15 detik maka dialog akan hilang dan tidak bisa akses ke lokasi player
         handler.postDelayed(requestTimeOut(), 15000)
 
         val content: View = findViewById(android.R.id.content)
