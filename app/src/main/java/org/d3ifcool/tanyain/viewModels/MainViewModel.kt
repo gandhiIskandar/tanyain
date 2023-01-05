@@ -18,6 +18,7 @@ class MainViewModel() : ViewModel() {
     fun insertData(pertanyaan: Pertanyaan) {
         viewModelScope.launch {
             withContext(Dispatchers.IO) {
+
                 db.insertData(pertanyaan)
             }
         }

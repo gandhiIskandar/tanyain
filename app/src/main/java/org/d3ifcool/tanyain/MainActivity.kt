@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     private val viewModel: FirebaseUserViewModel by viewModels()
     private lateinit var dialogLoading:AlertDialog
     private lateinit var handler:Handler
+    private lateinit var callback:Runnable
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,10 +34,12 @@ class MainActivity : AppCompatActivity() {
 
         dialogLoading.show()
 
+        callback = requestTimeOut()
+
         handler = Handler(Looper.getMainLooper())
 
         // jika lokasi tidak ditemukan selama 15 detik maka dialog akan hilang dan tidak bisa akses ke lokasi player
-        handler.postDelayed(requestTimeOut(), 15000)
+        handler.postDelayed(callback, 15000)
 
         val content: View = findViewById(android.R.id.content)
 
@@ -86,6 +89,8 @@ class MainActivity : AppCompatActivity() {
                         viewModel.location = location
 
                         Log.d("locationa", location.latitude.toString())
+
+                        handler.removeCallbacks(callback)
 
                         dialogLoading.dismiss()
                     }
@@ -142,6 +147,8 @@ class MainActivity : AppCompatActivity() {
                     Log.d("locationb", it.longitude.toString())
                     viewModel.location = it
                     dialogLoading.dismiss()
+                    handler.removeCallbacks(callback)
+
 
                 }
             }

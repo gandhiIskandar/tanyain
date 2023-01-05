@@ -2,6 +2,8 @@ package org.d3ifcool.tanyain.ui.dialog
 
 import android.app.Dialog
 import android.os.Bundle
+import android.text.InputFilter
+import android.text.Spanned
 import android.util.Log
 import android.view.Gravity
 import android.widget.Toast
@@ -28,6 +30,8 @@ class InsertDialog(private val data: Pertanyaan?, private val userId: String) : 
         val builder = AlertDialog.Builder(requireContext()).apply {
             setView(binding.root)
         }
+
+
         binding.btnCancel.setOnClickListener { dismiss() }
 
         binding.btnAdd.setOnClickListener {
@@ -50,6 +54,9 @@ class InsertDialog(private val data: Pertanyaan?, private val userId: String) : 
         if (data != null) binding.textFieldPertanyaan.setText(data.pertanyaan)
         if (data != null) binding.btnAdd.text = getString(R.string.selesai)
 
+        binding.textFieldPertanyaan.filters = arrayOf(inputFilter())
+
+
         return builder.create()
     }
 
@@ -66,9 +73,21 @@ class InsertDialog(private val data: Pertanyaan?, private val userId: String) : 
             return null
         }
         return Pertanyaan(
-            pertanyaan = binding.textFieldPertanyaan.text.toString(),
+            pertanyaan = checkTandaTanya(),
             userId = userId
         )
+    }
+
+    private fun checkTandaTanya(): String {
+
+        val pertanyaan = binding.textFieldPertanyaan.text.toString()
+
+        return if (pertanyaan.last() != '?') {
+            "$pertanyaan?"
+        } else {
+            pertanyaan
+        }
+
     }
 
     private fun updateData(userId: String): Pertanyaan? {
@@ -78,8 +97,21 @@ class InsertDialog(private val data: Pertanyaan?, private val userId: String) : 
         }
         return Pertanyaan(
             id = data!!.id,
-            pertanyaan = binding.textFieldPertanyaan.text.toString(),
+            pertanyaan = checkTandaTanya(),
             userId = userId,
         )
+    }
+
+    private fun inputFilter():InputFilter{
+        val filter = InputFilter { source, start, end, _, _, _ ->
+            for(i in start until end){
+                if(!Character.isLetterOrDigit(source[i]) && source[i] != '?'){
+                    return@InputFilter ""
+                }
+            }
+            return@InputFilter null
+        }
+
+        return filter
     }
 }
