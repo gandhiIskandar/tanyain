@@ -10,6 +10,8 @@ import android.view.View
 import android.view.ViewTreeObserver
 import androidx.activity.viewModels
 import android.app.AlertDialog
+import android.os.Handler
+import android.os.Looper
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
@@ -21,6 +23,7 @@ class MainActivity : AppCompatActivity() {
 
     private val viewModel: FirebaseUserViewModel by viewModels()
     private lateinit var dialogLoading:AlertDialog
+    private lateinit var handler:Handler
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +32,11 @@ class MainActivity : AppCompatActivity() {
         dialogLoading = dialogLoading()
 
         dialogLoading.show()
+
+        handler = Handler(Looper.getMainLooper())
+
+        // dialog loading akan hilang dan lokasi tidak ditemukan
+        handler.postDelayed(requestTimeOut(), 15000)
 
         val content: View = findViewById(android.R.id.content)
 
@@ -155,11 +163,13 @@ class MainActivity : AppCompatActivity() {
         return dialog
     }
 
-    private fun requestTimeOut(){
+    private fun requestTimeOut()= Runnable {
         dialogLoading.dismiss()
 
         Toast.makeText(this,"Gagal mendapatkan lokasi, mohon coba lagi nanti", Toast.LENGTH_SHORT).show()
-
     }
+
+
+
 
 }
