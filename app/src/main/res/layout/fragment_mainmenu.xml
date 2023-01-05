@@ -22,7 +22,7 @@
         android:id="@+id/btn_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         android:backgroundTint="@color/button_color"
         android:fontFamily="@font/cagliostro_regular"
         android:text="@string/main_btn"
@@ -45,6 +45,19 @@
         app:layout_constraintTop_toBottomOf="@id/btn_main" />
 
     <Button
+        android:id="@+id/btn_checkLokasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/button_color"
+        android:fontFamily="@font/cagliostro_regular"
+        android:text="@string/checkLokasi"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_ubah_pertanyaan" />
+
+    <Button
         android:id="@+id/btn_about"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -55,7 +68,7 @@
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_ubah_pertanyaan" />
+        app:layout_constraintTop_toBottomOf="@id/btn_checkLokasi" />
 
     <Button
         android:id="@+id/btn_logout"

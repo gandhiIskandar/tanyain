@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -17,6 +18,7 @@ class MainmenuFragment : Fragment() {
     private lateinit var binding: FragmentMainmenuBinding
 
     private val viewModel: FirebaseUserViewModel by activityViewModels()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,6 +43,15 @@ class MainmenuFragment : Fragment() {
             AuthUI.getInstance().signOut(requireContext())
         }
         binding.btnExit.setOnClickListener { requireActivity().finish() }
+
+        binding.btnCheckLokasi.setOnClickListener {
+
+            if (viewModel.location == null) {
+                Toast.makeText(requireContext(),"Tidak bisa mendapatkan lokasi", Toast.LENGTH_SHORT).show()
+            } else {
+                findNavController().navigate(R.id.action_mainmenuFragment_to_mapsFragment)
+            }
+        }
 
         viewModel.authState.observe(viewLifecycleOwner) {
             if (it == null) {

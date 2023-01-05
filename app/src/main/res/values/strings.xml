@@ -22,4 +22,6 @@
     <string name="main_lagi">Main Lagi!</string>
     <string name="pertanyaan_kosong">Belum ada pertanyaan nih, isi dulu di menu "ubah pertanyaan"</string>
     <string name="logout">Logout</string>
+    <string name="checkLokasi">Cek lokasi pemain</string>
+    <string name="lokasisaatini">Lokasi kamu saat ini</string>
 </resources>

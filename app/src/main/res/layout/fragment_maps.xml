@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/primary"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:weightSum="10"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:layout_gravity="center"
+
+        android:contentDescription="@string/logo_tanyain"
+        android:src="@drawable/ic_tanyain_wrapped"
+         />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    android:fontFamily="@font/cagliostro_regular"
+    android:textSize="17sp"
+    android:layout_weight="0.5"
+    android:gravity="center"
+    android:layout_gravity="center_horizontal"
+    android:text="@string/lokasisaatini"
+    />
+
+    <TextView
+        android:id="@+id/lokasiPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fontFamily="@font/cagliostro_regular"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:text=""
+        />
+
+<fragment
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="5"
+    tools:context=".MapsFragment" />
+
+</LinearLayout>
