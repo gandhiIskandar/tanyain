@@ -54,7 +54,7 @@ class InsertDialog(private val data: Pertanyaan?, private val userId: String) : 
         if (data != null) binding.textFieldPertanyaan.setText(data.pertanyaan)
         if (data != null) binding.btnAdd.text = getString(R.string.selesai)
 
-        binding.textFieldPertanyaan.filters = arrayOf(inputFilter())
+      //  binding.textFieldPertanyaan.filters = arrayOf(inputFilter())
 
 
         return builder.create()
@@ -105,7 +105,7 @@ class InsertDialog(private val data: Pertanyaan?, private val userId: String) : 
     private fun inputFilter():InputFilter{
         val filter = InputFilter { source, start, end, _, _, _ ->
             for(i in start until end){
-                if(!Character.isLetterOrDigit(source[i]) && source[i] != '?'){
+                if(!Character.isLetterOrDigit(source[i]) && source[i] != '?' && source[i]!=' '){
                     return@InputFilter ""
                 }
             }
